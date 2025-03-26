@@ -57,6 +57,4 @@ it Generates the following
 # DEMO
 
 
-    ```markdown
-    ![Alt text](image.png)
-    ```
+![Alt text](image.png)
