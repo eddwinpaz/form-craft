@@ -19,6 +19,7 @@ export interface Schema {
 export interface SchemaFormProps {
   schema: Schema;
   defaultData?: Record<string, any>;
+  data?: Record<string, any>;
   columns?: number;
   onUpdate?: (data: Record<string, any>) => void;
 }

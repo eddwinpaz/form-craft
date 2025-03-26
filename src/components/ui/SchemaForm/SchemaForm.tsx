@@ -5,16 +5,19 @@ import { Schema, SchemaFormProps, SchemaProperty } from './types';
 export function SchemaForm({ 
   schema, 
   defaultData = {}, 
+  data,
   columns = 1,
   onUpdate 
 }: SchemaFormProps) {
   const [formData, setFormData] = useState<Record<string, any>>(defaultData);
 
   useEffect(() => {
-    if (Object.keys(defaultData).length > 0) {
+    if (data) {
+      setFormData(data);
+    } else if (Object.keys(defaultData).length > 0) {
       setFormData(defaultData);
     }
-  }, [defaultData]);
+  }, [defaultData, data]);
 
   const updateField = (name: string, value: any) => {
     const updatedData = {
