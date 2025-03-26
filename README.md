@@ -1,5 +1,16 @@
 # Form Craft
 
+Generate Forms with custom design systems, by using a simple schema object that supports
+
+- input, select, checkbox, textarea
+- validation (required)
+- limits (min,max)
+- label naming
+- place holder
+
+
+# Schema Object
+
 ```
 const schema: Schema = {
   properties: {
